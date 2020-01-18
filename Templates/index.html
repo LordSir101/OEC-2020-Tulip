@@ -4,10 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <title>Display</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}" />
 </head>
 <body>
-    <h3>Energy Available</h3>
-    <div>
+   
+    <div class="leftSide content">
+        <h3>Energy Available</h3>
         {% for key, value in usable.items() %}
         <p><strong>{{key}}:</strong>&nbsp &nbsp &nbsp{{value}}</p>
         {% endfor %}
@@ -16,16 +18,22 @@
 
     <br /><br />
     
-    <h3>Energy Used</h3>
-    <div>
+    
+    <div class="rightSide content">
+        <h3>Energy Used</h3>
         {% for key, value in display.items() %}
-        <p><strong>{{key}}</strong>&nbsp &nbsp &nbsp{{value}}</p>
+        <p><strong>{{key}}:</strong>&nbsp &nbsp &nbsp{{value}}</p>
         {% endfor %}
     </div>
 
-    <div>
+    <div class="content" id="display">
         Energy Demand: {{demand}}<br />
         Energy Used: {{used}}
+        {{error}}
+
+        <form method="post">
+            <input type="submit" value="Next Hour">
+        </form>
     </div>
     
 </body>

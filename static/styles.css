@@ -1,0 +1,44 @@
+* {
+    text-align: center;
+}
+
+body {
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.content {
+    color: #7f7;
+    text-shadow: 1.7px 1.7px 1.7px #101010, 1.7px -1.7px 1.7px #101010, -1.7px 1.7px 1.7px #101010, -1.7px -1.7px 1.7px #101010;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.leftSide {
+    height: 50%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    left: 0;
+}
+
+.rightSide {
+    height: 50%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    right: 0;
+}
+
+#display{
+    margin-top: 40%
+}
