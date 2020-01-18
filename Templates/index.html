@@ -6,6 +6,27 @@
     <title>Display</title>
 </head>
 <body>
-    {{display}}
+    <h3>Energy Available</h3>
+    <div>
+        {% for key, value in usable.items() %}
+        <p><strong>{{key}}:</strong>&nbsp &nbsp &nbsp{{value}}</p>
+        {% endfor %}
+    </div>
+    
+
+    <br /><br />
+    
+    <h3>Energy Used</h3>
+    <div>
+        {% for key, value in display.items() %}
+        <p><strong>{{key}}</strong>&nbsp &nbsp &nbsp{{value}}</p>
+        {% endfor %}
+    </div>
+
+    <div>
+        Energy Demand: {{demand}}<br />
+        Energy Used: {{used}}
+    </div>
+    
 </body>
 </html>
